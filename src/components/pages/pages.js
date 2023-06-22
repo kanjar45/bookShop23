@@ -1,5 +1,6 @@
 import React from 'react';
 import Scrollable from "../slider/slider";
+import About from "../aboutUs/about";
 
 const Pages = () => {
     const data = [
@@ -89,6 +90,7 @@ const Pages = () => {
                     }
                 </Scrollable>
             </div>
+            <About/>
         </div>
     );
 };

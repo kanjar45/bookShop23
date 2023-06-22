@@ -2,6 +2,7 @@ import React from 'react';
 import Scrollable from "../slider/slider";
 import About from "../aboutUs/about";
 import Hero from "../hero/hero";
+import Genres from "../genres/genres";
 
 const Pages = () => {
     const data = [
@@ -63,6 +64,7 @@ const Pages = () => {
     return (
         <div>
             <Hero/>
+            <Genres/>
             <div className='containerScroll'>
                 <Scrollable _class='data'>
                     {

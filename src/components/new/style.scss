@@ -1,0 +1,73 @@
+@mixin cardStyle {
+  height: 403px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  cursor: pointer;
+}
+
+@mixin card__h4 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 22px;
+}
+
+@mixin card__p {
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 25px;
+  text-align: left;
+  color: grey;
+}
+
+#new {
+margin: 150px 0;
+  .new {
+    &--title {
+      margin: 80px 0;
+
+      h1 {
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 58px;
+        text-align: center;
+      }
+    }
+
+    &--cards {
+      display: flex;
+      justify-content: center;
+      margin-top: 70px;
+
+      h4 {
+        @include card__h4;
+      }
+
+      p {
+        @include card__p;
+      }
+
+      &__card {
+        @include cardStyle;
+        margin-top: 30px;
+
+      }
+
+      &__card2 {
+        @include cardStyle;
+        margin: 0 80px;
+
+      }
+
+      &__card3 {
+        @include cardStyle;
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+
+

@@ -7,6 +7,7 @@
   width: 100%;
   top: 0;
 
+
   .navbar {
     padding: 20px 0;
 
@@ -20,18 +21,26 @@
 
     }
 
-    &--icon {
-      &__search {
-        font-size: 20px;
-        cursor: pointer;
-      }
 
-      &__basket {
-        font-size: 20px;
-        margin: 0 10px;
+        &--icon {
+          &__search {
+            font-size: 20px;
+            cursor: pointer;
+          }
+
 
         cursor: pointer;
+
+          &__basket {
+            font-size: 20px;
+            margin: 0 10px;
+
+            cursor: pointer;
+          }
+        }
+
       }
     }
-  }
-}
+
+
+

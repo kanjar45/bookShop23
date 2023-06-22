@@ -1,0 +1,26 @@
+.container{
+  width: 1140px;
+}
+.content{
+  margin-bottom: 150px;
+}
+
+.content h1{
+  font-family: Public Sans,sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  text-align: center;
+}
+.about-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.p{
+  font-family: Public Sans,sans-serif;
+  font-weight:400;
+  font-size: 18px;
+  line-height: 25.2px;
+  width: 500px;
+
+}

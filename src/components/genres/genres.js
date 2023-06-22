@@ -7,7 +7,7 @@ import img4 from '../../assets/img/image 8(4).png'
 import img5 from '../../assets/img/image 8(5).png'
 import {NavLink} from "react-router-dom";
 
-const Pages = () => {
+const Genres = () => {
     return (
         <div id="genres">
             <div className='container'>
@@ -48,4 +48,4 @@ const Pages = () => {
 
     );
 };
-export default Pages;
+export default Genres;

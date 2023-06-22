@@ -68,10 +68,10 @@ const Pages = () => {
     return (
         <div>
             <Hero/>
-
+            <Genres/>
             <New/>
 
-            <Genres/>
+
 
             <div className='containerScroll'>
                 <Scrollable _class='data'>

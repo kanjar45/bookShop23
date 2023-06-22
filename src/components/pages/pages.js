@@ -89,8 +89,10 @@ const Pages = () => {
                         })
                     }
                 </Scrollable>
-            </div>
-            <About/>
+                </div>
+                <About/>
+
+
         </div>
     );
 };

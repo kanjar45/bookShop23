@@ -1,9 +1,9 @@
-#header{
+#header {
 
   background: #FFFFFF;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
-position: fixed;
+  position: fixed;
   width: 100%;
   top: 0;
 
@@ -12,15 +12,11 @@ position: fixed;
 
     .nav-item {
 
-
-  .navbar{
-    padding: 20px 0;
-    .nav-item{
-
       font-weight: 700;
       font-size: 17px;
       letter-spacing: -0.6px;
       color: rgba(0, 0, 0, 0.44);
+
 
     }
 
@@ -33,15 +29,6 @@ position: fixed;
       &__basket {
         font-size: 20px;
         margin: 0 10px;
-
-    &--icon{
-      &__search{
-        font-size: 20px;
-        cursor: pointer;
-      }
-      &__basket{
-        font-size: 20px;
-        margin:0 10px;
 
         cursor: pointer;
       }

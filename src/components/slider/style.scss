@@ -1,0 +1,17 @@
+.containerScroll{
+  max-width: 1350px;
+  margin: auto;
+}
+.data{
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width:none;
+  //width: 0;
+  //background: transparent;
+}
+.data div>div{
+  margin-left: 25px;
+}
+.data::-webkit-scrollbar{width: 0}

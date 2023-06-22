@@ -1,0 +1,20 @@
+#hero{
+  height: 100vh;
+  margin: 20px 0;
+  background: url("./../../assets/img/Main image (6).png")no-repeat center/cover;
+  .hero{
+    text-align: center;
+    padding-top:27%;
+    h1{
+      font-weight: 900;
+      font-size: 48px;
+      color: #FFFFFF;
+    }
+    p{
+      font-weight: 500;
+      font-size: 18px;
+      color: #19272E;
+
+    }
+  }
+}

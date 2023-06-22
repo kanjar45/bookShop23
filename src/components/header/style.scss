@@ -2,24 +2,30 @@
 
   background: #FFFFFF;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+position: fixed;
+  width: 100%;
+  top: 0;
 
-  .navbar{
+  .navbar {
     padding: 20px 0;
-    .nav-item{
+
+    .nav-item {
       font-weight: 700;
       font-size: 17px;
       letter-spacing: -0.6px;
       color: rgba(0, 0, 0, 0.44);
 
     }
-    &--icon{
-      &__search{
+
+    &--icon {
+      &__search {
         font-size: 20px;
         cursor: pointer;
       }
-      &__basket{
+
+      &__basket {
         font-size: 20px;
-        margin:0 10px;
+        margin: 0 10px;
         cursor: pointer;
       }
     }

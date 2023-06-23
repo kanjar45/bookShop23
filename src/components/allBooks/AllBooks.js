@@ -88,14 +88,12 @@ const AllBooks = () => {
                             <a href="#">Clear filters</a>
                         </div>
 
-                            <select  className="books--center__option">
-                                <option   value="value1">popular</option>
-                                <option value="value2">popular</option>
-                                <option value="value3">new</option>
+                        <select className="books--center__option">
+                            <option value="value1">popular</option>
+                            <option value="value2">popular</option>
+                            <option value="value3">new</option>
 
-                            </select>
-
-
+                        </select>
 
 
                     </div>
@@ -167,7 +165,7 @@ const AllBooks = () => {
                         <div className="books--bottom__right ">
                             {Data.map((el) => {
                                 return (
-                                    <div className="books--bottom__right--card">
+                                    <div key={el.id} className="books--bottom__right--card">
                                         <img style={{
                                             width: "285px",
                                             height: "310px",

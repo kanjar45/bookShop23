@@ -2,7 +2,7 @@ import React from 'react';
 
 import "./style.scss"
 
-import {NavLink} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import {BiSearch} from "react-icons/bi";
 import {HiOutlineShoppingBag} from "react-icons/hi";
 
@@ -32,7 +32,9 @@ const Header = () => {
                         </ul>
                         <div className="navbar--icon my-2 my-lg-0">
                             <BiSearch className="navbar--icon__search"/>
-                            <HiOutlineShoppingBag className="navbar--icon__basket"/>
+                            <Link to={'/cart'}>
+                                <HiOutlineShoppingBag className="navbar--icon__basket"/>
+                            </Link>
                         </div>
                     </div>
                 </div>

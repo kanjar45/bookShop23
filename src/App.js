@@ -2,12 +2,17 @@ import './App.scss';
 import Footer from "./components/footer/footer";
 import Pages from "./components/pages/pages";
 import Header from "./components/header/header";
+import Cart from "./components/myCart/Cart";
+import {Route, Routes} from "react-router";
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <Pages/>
+        <Routes>
+            <Route path={'/'} element={<Pages/>}/>
+            <Route path={'/cart'} element={<Cart/>}/>
+        </Routes>
     <Footer/>
     </div>
   );

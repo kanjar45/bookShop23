@@ -72,7 +72,6 @@ const Pages = () => {
             <New/>
 
 
-
             <div className='containerScroll'>
                 <Scrollable _class='data'>
                     {

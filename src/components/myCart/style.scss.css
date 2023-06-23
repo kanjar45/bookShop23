@@ -1,0 +1,53 @@
+.caption{
+    margin: 100px;
+}
+.caption h1{
+    color: var(-#19272E);
+    font-size: 36px;
+    font-family: Public Sans,sans-serif;
+    font-weight: 600;
+    line-height: 44px;
+}
+.caption h4{
+    color: #19272E;
+    font-size: 16px;
+    font-family: Public Sans,sans-serif;
+    line-height: 26px;
+}
+.cart-content{
+    display: flex;
+    justify-content: flex-end;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.res{
+    width: 580px;
+    height: 350px;
+}
+.res h1{
+    color: var(-#19272E);
+    font-size: 22px;
+    font-family: Public Sans,sans-serif;
+    font-weight: 600;
+    line-height: 30px;
+    margin-bottom: 64px;
+}
+.shipping p{
+    color: var(-#0D0D0D);
+    font-size: 14px;
+    font-family: Public Sans,sans-serif;
+    letter-spacing: -0.3px;
+}
+.select h5{
+    color: var(-#19272E);
+    text-align: right;
+    font-size: 16px;
+    font-family: Public Sans,sans-serif;
+}
+.linia{
+    width: 200px;
+    height: 1px;
+    border: 1px solid black;
+}

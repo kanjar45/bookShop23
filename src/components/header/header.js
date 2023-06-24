@@ -3,7 +3,6 @@ import React from 'react';
 import "./style.scss"
 
 import {Link, NavLink} from "react-router-dom";
-import {NavLink} from "react-router-dom";
 import {BiSearch} from "react-icons/bi";
 import {HiOutlineShoppingBag} from "react-icons/hi";
 

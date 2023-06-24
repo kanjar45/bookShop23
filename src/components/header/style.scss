@@ -1,33 +1,54 @@
 #header {
   background: #FFFFFF;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   top: 0;
-.burger-menu{
-  height: 50px;
-  background: white;
-}
-  .navbar {
-    padding: 20px 0;
-    .nav-item {
-      font-weight: 700;
-      font-size: 17px;
-      letter-spacing: -0.6px;
-      color: rgba(0, 0, 0, 0.44);
+
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   padding: 15px 0;
+   ul{
+      display: flex;
+     align-items: center;
+      li{
+        list-style-type: none;
+        margin:0 10px;
+
+      }
     }
-    &--icon {
-      &__search {
+    &--title{
+      color: var(--text-color, #19272E);
+      font-size: 19px;
+      font-family: Public Sans;
+      font-weight: 500;
+      letter-spacing: -0.6px;
+    }
+    .active{
+      color: var(--main-color, #818EEA);
+      font-size: 20px;
+      font-family: Public Sans;
+      font-weight: 700;
+      letter-spacing: -0.6px;
+    }
+    &--icons{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      &__search{
         font-size: 20px;
+        margin:6px  10px 0 0;
         cursor: pointer;
       }
-      &__basket {
+      &__basket{
         font-size: 20px;
-        margin: 0 10px;
-        cursor: pointer;
+        color: rgba(25, 39, 46, 1);
       }
     }
   }
+
 }
 
 

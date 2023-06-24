@@ -1,43 +1,43 @@
 import React from 'react';
-import "./style.scss"
-import {NavLink} from "react-router-dom";
+import {NavLink,Link} from "react-router-dom";
 
-import {Link, NavLink} from "react-router-dom";
 import {BiSearch} from "react-icons/bi";
 import {HiOutlineShoppingBag} from "react-icons/hi";
 const Header = () => {
     return (
         <div id="header">
-            <nav className="navbar  navbar-expand-lg navbar-light ">
-                <div className="container">
-                    <div className="collapse d-flex justify-content-between  navbar-collapse"
-                         id="navbarSupportedContent">
-                        <ul className="navbar-nav mr-auto">
-                            <li className="nav-item active ">
-                                <NavLink to={"/"} className="nav-link" href="#">Bookshop</NavLink>
+            <div className="container">
+
+                    <div className="header">
+                        <ul  >
+                            <li>
+                                <NavLink to={"/"} className="header--title " >Bookshop</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <NavLink to={"/books"} className="nav-link" href="#">Categories</NavLink>
+                            <li >
+                                <NavLink to={"/books"}   className="header--title" >Categories</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link " href="#">Recent</a>
+                            <li >
+                                <NavLink to={"/recent"}   className="header--title" >Recent</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link " href="#">Books</a>
+                            <li >
+                                <NavLink to={"/hello"}   className="header--title" >Books</NavLink>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link " href="#">About Us</a>
+                            <li >
+                                <NavLink to={"/about"}   className="header--title" >About Us</NavLink>
                             </li>
+
+
                         </ul>
-                        <div className="navbar--icon my-2 my-lg-0">
-                            <BiSearch className="navbar--icon__search"/>
+                        <div className="header--icons" >
+                            <BiSearch className="header--icons__search "/>
                             <Link to={'/cart'}>
-                                <HiOutlineShoppingBag className="navbar--icon__basket"/>
+                                <HiOutlineShoppingBag  className="header--icons__basket"/>
                             </Link>
                         </div>
                     </div>
-                </div>
-            </nav>
+
+
+            </div>
         </div>
     );
 };

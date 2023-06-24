@@ -1,11 +1,10 @@
 import React from 'react';
-
 import "./style.scss"
+import {NavLink} from "react-router-dom";
 
 import {Link, NavLink} from "react-router-dom";
 import {BiSearch} from "react-icons/bi";
 import {HiOutlineShoppingBag} from "react-icons/hi";
-
 const Header = () => {
     return (
         <div id="header">
@@ -38,11 +37,8 @@ const Header = () => {
                         </div>
                     </div>
                 </div>
-
-
             </nav>
         </div>
     );
 };
-
 export default Header;

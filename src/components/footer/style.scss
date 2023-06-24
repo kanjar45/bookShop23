@@ -1,12 +1,15 @@
 #footer  {
   background: #818EEA;
-
+.lorems{
+  display: flex;
+  width: 800px;
+  justify-content: space-around;
+}
   .footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 100px 0;
-
     &--block {
       padding-bottom: 20px ;
       h1 {
@@ -38,7 +41,6 @@
           align-items: center;
           letter-spacing: -0.3px;
           color: #FFFFFF;
-
         }
         input{
           background: transparent;
@@ -52,7 +54,6 @@
           padding: 10px;
         }
       }
-
     }
     &--title{
       h4{
@@ -61,7 +62,6 @@
         letter-spacing: -0.4px;
         color: #FFFFFF;
         margin-bottom: 25px;
-
       }
       div{
         display: flex;
@@ -76,8 +76,6 @@
           cursor: pointer;
         }
       }
-
     }
   }
-
 }

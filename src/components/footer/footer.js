@@ -16,47 +16,51 @@ const Footer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='footer--title'>
-                        <h4>Lorem Ipsum</h4>
-                        <div>
-                            <p>lorem</p>
-                            <p>lorem</p>
-                            <p>lorem</p>
-                            <p>lorem</p>
-                            <p>lorem</p>
-                        </div>
 
-                    </div>
-                    <div className='footer--title'>
-                        <h4>Lorem Ipsum</h4>
-                        <div>
-                            <p>lorem</p>
-                            <p>lorem</p>
-                            <p>lorem</p>
-                            <p>lorem</p>
-                            <p>lorem</p>
-                        </div>
+                    <div className='lorems'>
+                        <div className='footer--title'>
+                            <h4>Lorem Ipsum</h4>
+                            <div>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                            </div>
 
-                    </div>
-                    <div className='footer--title'>
-                        <h4>Lorem Ipsum</h4>
-                        <div>
-                            <p>lorem</p>
-                            <p>lorem</p>
-                            <p>lorem</p>
-                            <p>lorem</p>
-                            <p>lorem</p>
                         </div>
+                        <div className='footer--title'>
+                            <h4>Lorem Ipsum</h4>
+                            <div>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                            </div>
 
-                    </div>
-                    <div className='footer--title'>
-                        <h4>Lorem Ipsum</h4>
-                        <div>
-                            <p>lorem</p>
-                            <p>lorem</p>
-                            <p>lorem</p>
-                            <p>lorem</p>
-                            <p>lorem</p>
+                        </div>
+                        <div className='footer--title'>
+                            <h4>Lorem Ipsum</h4>
+                            <div>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                            </div>
+
+                        </div>
+                        <div className='footer--title'>
+                            <h4>Lorem Ipsum</h4>
+                            <div>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                                <p>lorem</p>
+                            </div>
+
                         </div>
 
                     </div>

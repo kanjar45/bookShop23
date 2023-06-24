@@ -6,7 +6,6 @@ import img3 from '../../assets/img/image 8(3).png'
 import img4 from '../../assets/img/image 8(4).png'
 import img5 from '../../assets/img/image 8(5).png'
 import {NavLink} from "react-router-dom";
-
 const Genres = () => {
     return (
         <div id="genres">
@@ -45,7 +44,6 @@ const Genres = () => {
                 </div>
             </div>
         </div>
-
     );
 };
 export default Genres;

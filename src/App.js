@@ -2,6 +2,8 @@ import './App.scss';
 import Footer from "./components/footer/footer";
 import Pages from "./components/pages/pages";
 import Header from "./components/header/header";
+import Burger from "./components/burger-menu/burger";
+
 import Cart from "./components/myCart/Cart";
 import {Route, Routes} from "react-router-dom";
 import AllBooks from "./components/allBooks/AllBooks";
@@ -20,6 +22,7 @@ function App() {
 
 
     <Footer/>
+        <Burger/>
     </div>
   );
 }

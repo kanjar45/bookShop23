@@ -29,7 +29,7 @@ setBooks(Data[id-1])
 </div>
                     <div className="cards--title__center">
                         <p>{books.subtitle}</p>
-                        <h2>${books.price}</h2>
+                        <h2>$ {books.price}</h2>
                     </div>
                     <div className="cards--title__bottom">
                         <button className="cards--title__bottom--btn">Add to Cart </button>

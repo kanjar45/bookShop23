@@ -1,4 +1,6 @@
 import React from 'react';
+import {FiInstagram} from "react-icons/fi";
+import {BsWhatsapp} from "react-icons/bs";
 
 const Footer = () => {
     return (
@@ -19,46 +21,18 @@ const Footer = () => {
 
                     <div className='lorems'>
                         <div className='footer--title'>
-                            <h4>Lorem Ipsum</h4>
+                            <h4>Our location and contacts</h4>
                             <div>
-                                <p>lorem</p>
-                                <p>lorem</p>
-                                <p>lorem</p>
-                                <p>lorem</p>
-                                <p>lorem</p>
+                                <p>Bishkek, Kalyk Akiev / Toktogul str., <br/> "Vesna" shopping Mall </p>
+                                <p>Phone +996777848510</p>
                             </div>
 
                         </div>
                         <div className='footer--title'>
-                            <h4>Lorem Ipsum</h4>
+                            <h4>Follow us</h4>
                             <div>
-                                <p>lorem</p>
-                                <p>lorem</p>
-                                <p>lorem</p>
-                                <p>lorem</p>
-                                <p>lorem</p>
-                            </div>
-
-                        </div>
-                        <div className='footer--title'>
-                            <h4>Lorem Ipsum</h4>
-                            <div>
-                                <p>lorem</p>
-                                <p>lorem</p>
-                                <p>lorem</p>
-                                <p>lorem</p>
-                                <p>lorem</p>
-                            </div>
-
-                        </div>
-                        <div className='footer--title'>
-                            <h4>Lorem Ipsum</h4>
-                            <div>
-                                <p>lorem</p>
-                                <p>lorem</p>
-                                <p>lorem</p>
-                                <p>lorem</p>
-                                <p>lorem</p>
+                                <a href="https://www.instagram.com/danek_books/"><FiInstagram/>  Instagram</a>
+                                <a href="https://api.whatsapp.com/send/?phone=996777858410&text&type=phone_number&app_absent=0"><BsWhatsapp/>  WhatApp</a>
                             </div>
 
                         </div>

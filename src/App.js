@@ -2,6 +2,8 @@ import './App.scss';
 import Footer from "./components/footer/footer";
 import Pages from "./components/pages/pages";
 import Header from "./components/header/header";
+import Burger from "./components/burger-menu/burger";
+
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
       <Header/>
       <Pages/>
     <Footer/>
+        <Burger/>
     </div>
   );
 }

@@ -1,0 +1,164 @@
+@media (max-width: 1200px){
+  .genres--blocks{
+    overflow-y: scroll;
+    .genres--blocks::-webkit-scrollbar {width: 0}
+  }
+}
+@media (max-width: 1024px){
+
+  .genres--blocks{
+    ::-webkit-scrollbar{
+      width: 0;}
+  }
+}
+
+@media (max-width: 993px){
+  .genres {
+    margin: 0;
+    .genres--title{
+      h1{
+        font-size: 32px;
+      }
+    }
+    .genres--blocks {
+      overflow-y: scroll;
+      width: 695px;
+      ::-webkit-scrollbar {
+        width: 0;
+      }
+      .genres--blocks__block{
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px){
+  .genres {
+    margin: 0;
+    .genres--title{
+      h1{
+        font-size: 28px;
+      }
+    }
+    .genres--blocks {
+      overflow-y: scroll;
+      width: 516px;
+      ::-webkit-scrollbar {
+        width: 0;
+      }
+      .genres--blocks__block{
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 575px){
+  .genres {
+    margin: 0;
+    .genres--title{
+      h1{
+        font-size: 20px;
+      }
+    }
+    .genres--blocks {
+      overflow-y: scroll;
+      width: 475px;
+      ::-webkit-scrollbar {
+        width: 0;
+      }
+      .genres--blocks__block{
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px){
+  .genres {
+    margin: 0;
+    .genres--title{
+      h1{
+        font-size: 32px;
+      }
+    }
+    .genres--blocks {
+      overflow-y: scroll;
+      width: 355px;
+      ::-webkit-scrollbar {
+        width: 0;
+      }
+      .genres--blocks__block{
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 414px){
+  .genres {
+    margin: 0;
+    .genres--title{
+      h1{
+        font-size: 32px;
+      }
+    }
+    .genres--blocks {
+      overflow-y: scroll;
+      width: 355px;
+      ::-webkit-scrollbar {
+        width: 0;
+      }
+      .genres--blocks__block{
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 375px){
+  .genres {
+    margin: 0;
+    .genres--title{
+      h1{
+        font-size: 28px;
+      }
+    }
+    .genres--blocks {
+      overflow-y: scroll;
+      width: 295px;
+      ::-webkit-scrollbar {
+        width: 0;
+      }
+      .genres--blocks__block{
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px){
+  .genres {
+    margin: 0;
+    .genres--title{
+      h1{
+        font-size: 26px;
+      }
+      .p-1{
+        font-size: 14px;
+      }
+    }
+    .genres--blocks {
+      overflow-y: scroll;
+      width: 255px;
+      ::-webkit-scrollbar {
+        width: 0;
+      }
+      .genres--blocks__block{
+        margin: 0 20px 0 0;
+      }
+    }
+  }
+}
+

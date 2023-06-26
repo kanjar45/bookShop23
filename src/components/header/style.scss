@@ -4,28 +4,30 @@
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 99;
 
   .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
    padding: 15px 0;
-   ul{
+   &--ul{
       display: flex;
      align-items: center;
-      li{
+     flex-wrap: wrap;
+      &__li{
         list-style-type: none;
         margin:0 10px;
-
+        &--title{
+          color: var(--text-color, #19272E);
+          font-size: 19px;
+          font-family: Public Sans;
+          font-weight: 500;
+          letter-spacing: -0.6px;
+        }
       }
     }
-    &--title{
-      color: var(--text-color, #19272E);
-      font-size: 19px;
-      font-family: Public Sans;
-      font-weight: 500;
-      letter-spacing: -0.6px;
-    }
+
     .active{
       color: var(--main-color, #818EEA);
       font-size: 20px;

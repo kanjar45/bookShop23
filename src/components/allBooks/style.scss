@@ -45,11 +45,11 @@
 
     &--bottom {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
       align-items: start;
 
       &__left {
-        width: 30%;
+        width: 40%;
 
         &--radio {
           margin: 10px 0;
@@ -59,21 +59,42 @@
       &__right {
         display: flex;
         flex-wrap: wrap;
-        align-items: start;
+        justify-content: space-between;
+
 
 
         &--card {
           display: flex;
           flex-direction: column;
-          align-items: center;
-          text-align: start;
-          margin-left: 35px;
-          width: 250px;
+          align-items: start;
+
+
+          &__img {
+
+            width: 250px;
+            margin-right: 10px;
+            img{
+              width: 200px;
+            }
+          }
 
           div {
-            margin-top: -10%;
             width: 200px;
+
+            h5 {
+              color: var(--text-color, #19272E);
+              font-size: 18px;
+              font-family: Public Sans;
+              font-weight: 700;
+             margin: 15px 0;
+            }
+            p{
+              color: var(--text-color, #19272E);
+              font-size: 16px;
+              font-family: Public Sans;
+            }
           }
+
         }
       }
     }

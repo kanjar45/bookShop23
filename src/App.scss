@@ -6,15 +6,13 @@
 @import "components/allBooks/style";
 @import "components/aboutUs/style";
 @import "components/slider/style";
-@import "components/header/media";
-@import "components/burger-menu/burger";
-@import "components/hero/media";
-@import "components/genres/media";
-@import "components/new/media";
-@import "components/slider/media";
-@import "components/aboutUs/media";
-@import "components/burger-menu/media";
-@import "components/footer/media";
+@import "components/header/medias";
+@import "components/hero/heroMedia";
+@import "components/genres/genresMedia";
+@import "components/new/newMedia";
+@import "components/slider/sliderMedia";
+@import "components/aboutUs/aboutMedia";
+@import "components/footer/footerMedia";
 @import "components/datailPage/style";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Public+Sans:wght@100;200;300;400;500&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 

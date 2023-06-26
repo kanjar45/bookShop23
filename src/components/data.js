@@ -5,7 +5,8 @@ const Data = [
         title: "MongoDB in Action, 2nd Edition",
         subtitle: "Covers MongoDB version 3.0",
         price: 20,
-        image: "https://itbook.store/img/books/9781617291609.png"
+        image: "https://itbook.store/img/books/9781617291609.png",
+quantity:1
     },
     {
         id: 2,

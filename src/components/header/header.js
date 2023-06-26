@@ -7,7 +7,6 @@ const Header = () => {
     return (
         <div id="header">
             <div className="container">
-
                     <div className="header">
                         <ul  >
                             <li>

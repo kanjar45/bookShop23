@@ -1,26 +1,26 @@
 
 
 #cards{
-  margin:150px 0;
-  .container  {
-    width: 70%;
     .cards{
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap;
+     justify-content:space-evenly;
+    padding: 50px 0;
+
       &--img{
         width :300px;
         height: 400px;
       }
       &--title{
-        margin-top:30px;
-        width: 60%;
         &__top{
           display: flex;
-          justify-content: space-between;
           align-items: start;
+
+          h3{
+            width: 50%;
+          }
         &--icons{
           display: flex;
-          justify-content: space-between;
           align-items: center;
           font-size: 30px;
           cursor: pointer;
@@ -28,15 +28,15 @@
         }
         &__center{
           margin: 50px 0;
-          width: 60%;
+         width: 60%;
          h2{
            color: rgba(129, 142, 234, 1);
          }
         }
         &__bottom{
           display: flex;
-          justify-content: space-between;
           align-items: center;
+          flex-wrap: wrap-reverse;
           &--btn{
             background: rgba(129, 142, 234, 1);
             color: #FFFFFF;
@@ -66,4 +66,3 @@
     }
   }
 
-}

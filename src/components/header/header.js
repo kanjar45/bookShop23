@@ -8,21 +8,21 @@ const Header = () => {
         <div id="header">
             <div className="container">
                     <div className="header">
-                        <ul  >
-                            <li>
-                                <NavLink to={"/"} className="header--title " >Bookshop</NavLink>
+                        <ul className="header--ul" >
+                            <li className="header--ul__li">
+                                <NavLink to={"/"} className="header--ul__li--title " >Bookshop</NavLink>
                             </li>
-                            <li >
-                                <NavLink to={"/books"}   className="header--title" >Categories</NavLink>
+                            <li className="header--ul__li">
+                                <NavLink to={"/books"}   className="header--ul__li--title" >Categories</NavLink>
                             </li>
-                            <li >
-                                <NavLink to={"/recent"}   className="header--title" >Recent</NavLink>
+                            <li className="header--ul__li">
+                                <NavLink to={"/recent"}   className="header--ul__li--title" >Recent</NavLink>
                             </li>
-                            <li >
-                                <NavLink to={"/hello"}   className="header--title" >Books</NavLink>
+                            <li className="header--ul__li">
+                                <NavLink to={"/hello"}   className="header--ul__li--title" >Books</NavLink>
                             </li>
-                            <li >
-                                <NavLink to={"/about"}   className="header--title" >About Us</NavLink>
+                            <li className="header--ul__li">
+                                <NavLink to={"/about"}   className="header--ul__li--title" >About Us</NavLink>
                             </li>
 
 

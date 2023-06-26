@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Data from "../data";
-import {NavLink, useParams} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 const AllBooks = () => {
 const [books,setBooks]=useState([])
     useEffect(()=>{
@@ -26,8 +26,6 @@ const [books,setBooks]=useState([])
                             <option value="value3">new</option>
 
                         </select>
-
-
                     </div>
                     <div className="books--bottom">
                         <div className="books--bottom__left">
@@ -99,16 +97,18 @@ const [books,setBooks]=useState([])
                                 books.map((el) => {
                                 return (
                                     <div key={el.id} className="books--bottom__right--card">
-                                      <NavLink key={el.id} to={`/books/${el.id}`}>
-                                          <img style={{
-                                              width: "285px",
-                                              height: "310px",
-
-                                          }} src={el.image} alt=""/>
-                                      </NavLink>
-                                        <div>
-                                            <h5>{el.title}</h5>
+                                        <div className="books--bottom__right--card__img">
+                                            <NavLink key={el.id} to={`/books/${el.id}`}>
+                                                <img  src={el.image} alt=""/>
+                                            </NavLink>
                                         </div>
+
+
+                                            <div>
+                                                <h5>{el.title}</h5>
+                                                <p>by {el.author}</p>
+                                            </div>
+
 
                                     </div>
                                 )

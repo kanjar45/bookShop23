@@ -8,7 +8,6 @@ import Cart from "./components/myCart/Cart";
 import {Route, Routes} from "react-router-dom";
 import AllBooks from "./components/allBooks/AllBooks";
 import DetailPage from "./components/datailPage/datailPage";
-import Burger from "./components/burger-menu/burger";
 import About from "./components/aboutUs/about";
 
 function App() {
@@ -27,7 +26,6 @@ function App() {
 
 
     <Footer/>
-        <Burger/>
     </div>
   );
 }

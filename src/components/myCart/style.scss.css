@@ -1,53 +1,72 @@
-.caption{
-    margin: 100px;
+
+.cart{
+    display: flex;
+    justify-content: space-around;
 }
-.caption h1{
-    color: var(-#19272E);
+.zagalovok h1{
     font-size: 36px;
-    font-family: Public Sans,sans-serif;
+    font-family: Public Sansm,sans-serif;
     font-weight: 600;
     line-height: 44px;
+    letter-spacing: -1.5px;
 }
-.caption h4{
+.zagalovok p{
     color: #19272E;
     font-size: 16px;
-    font-family: Public Sans,sans-serif;
+    font-fatmily: Public Sans,sans-serif;
     line-height: 26px;
+    letter-spacing: -0.2px;
 }
-.cart-content{
-    display: flex;
-    justify-content: flex-end;
+.zagalovok a{
+    text-decoration-line: none;
 }
-.content{
-    display: flex;
-    justify-content: space-between;
+.cart_content{
+    margin-top:150px;
+    width: 405px;
+    height: 800px;
 }
-.res{
-    width: 580px;
-    height: 350px;
-}
-.res h1{
-    color: var(-#19272E);
+.cart_content h1{
     font-size: 22px;
     font-family: Public Sans,sans-serif;
     font-weight: 600;
     line-height: 30px;
-    margin-bottom: 64px;
+    letter-spacing: -0.55px;
+    margin-bottom: 60px;
 }
-.shipping p{
-    color: var(-#0D0D0D);
+.shipping,.Payment{
+    display: flex;
+    justify-content: space-between;
+}
+.shipping h5,.Payment h5,.total h5{
+    font-size: 14px;
+    font-family: Public Sans,sans-serif;
+    letter-spacing: -0.3px;
+    margin-bottom:30px ;
+}
+.linear{
+    border: 1px solid black;
+}
+.total{
+    display: flex;
+    justify-content: space-between;
+    margin:30px 0;
+}
+.total p{
     font-size: 14px;
     font-family: Public Sans,sans-serif;
     letter-spacing: -0.3px;
 }
-.select h5{
-    color: var(-#19272E);
-    text-align: right;
+.cart_content button{
+    background:  #818EEA;
+    color: #FFFFFF;
+    width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
     font-size: 16px;
     font-family: Public Sans,sans-serif;
-}
-.linia{
-    width: 200px;
-    height: 1px;
-    border: 1px solid black;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -0.4px;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.scss.css'
+
 import {IoIosArrowForward} from "react-icons/io";
 const Cart = () => {
     return (
@@ -30,6 +30,7 @@ const Cart = () => {
                 </div>
                 <button>Continue to checkout</button>
             </div>
+            <div></div>
         </div>
     );
 };

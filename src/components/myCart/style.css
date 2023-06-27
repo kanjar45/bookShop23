@@ -2,13 +2,14 @@
 .cart{
     display: flex;
     justify-content: space-around;
+    margin-top: 130px;
 }
 .zagalovok h1{
+    color:  #19272E;
     font-size: 36px;
-    font-family: Public Sansm,sans-serif;
+    font-family: Public Sans;
     font-weight: 600;
     line-height: 44px;
-    letter-spacing: -1.5px;
 }
 .zagalovok p{
     color: #19272E;
@@ -18,19 +19,20 @@
     letter-spacing: -0.2px;
 }
 .zagalovok a{
-    text-decoration-line: none;
+    text-decoration: none;
+    color:  #818EEA;
 }
 .cart_content{
-    margin-top:150px;
+    margin-top:130px;
     width: 405px;
     height: 800px;
 }
 .cart_content h1{
+    color:  #19272E;
     font-size: 22px;
-    font-family: Public Sans,sans-serif;
+    font-family: Public Sans;
     font-weight: 600;
     line-height: 30px;
-    letter-spacing: -0.55px;
     margin-bottom: 60px;
 }
 .shipping,.Payment{
@@ -40,8 +42,9 @@
 .shipping h5,.Payment h5,.total h5{
     font-size: 14px;
     font-family: Public Sans,sans-serif;
-    letter-spacing: -0.3px;
     margin-bottom:30px ;
+font-weight: 500;
+    color: #0D0D0D;
 }
 .linear{
     border: 1px solid black;
@@ -66,7 +69,7 @@
     outline: none;
     font-size: 16px;
     font-family: Public Sans,sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 22px;
     letter-spacing: -0.4px;
 }

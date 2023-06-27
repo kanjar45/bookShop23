@@ -1,19 +1,14 @@
-@media (max-width: 1024px){
-  .lorems{
-    width: 50%;
-  }
-}
 
 @media (max-width: 993px){
   .footer{
     margin: 0;
     padding: 0;
     flex-direction: column;
-    .lorems{
+   &--bottom{
       display: grid;
       margin-left: 20px;
       grid-template-columns: 200px 200px ;
-      .footer--title{
+      &__title{
         margin: 20px 0;
       }
     }
@@ -21,16 +16,18 @@
 }
 @media (max-width: 768px){
   .footer{
-    margin: 0;
-    padding: 0;
+    padding: 50px 0;
     flex-direction: column;
-    .lorems{
-      display: grid;
-      margin-left: 20px;
-      grid-template-columns: 200px 200px;
-      .footer--title{
+    &--bottom{
+
+      &__title{
         margin: 20px 0;
       }
     }
+  }
+}
+@media (max-width: 480px) {
+  .footer{
+
   }
 }

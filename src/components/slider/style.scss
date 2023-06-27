@@ -1,5 +1,11 @@
 #slider{
   .slider{
+    h1{
+      color: var(--text-color, #19272E);
+      font-size: 48px;
+      font-family: Public Sans;
+      font-weight: 500;
+    }
 &--cards{
   z-index: 0;
   &__card{
@@ -12,13 +18,17 @@
       font-size: 18px;
       font-family: Public Sans;
       font-weight: 700;
-      margin-top: 10px;
+      line-height: 110%;
+      margin: 10px 0;
+      width: 200px;
     }
     p{
-      font-family: Public Sans;
-      font-weight: 400;
+      color: var(--text-color, #19272E);
       font-size: 16px;
-      padding-right: 10px;
+      font-family: Public Sans;
+      opacity: 0.699999988079071;
+      width: 200px;
+
     }
   }
 }

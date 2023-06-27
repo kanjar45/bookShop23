@@ -1,25 +1,30 @@
-
-@media (max-width: 993px){
+@media (max-width: 1200px) {
   .hero{
-    .parent{
-      margin-top: 150px;
+    h1{
+      padding-top: 60px;
     }
   }
 }
 @media (max-width: 768px){
   .hero{
-    margin-top:90px;
+   &--parent{
+     h1{
+       padding-top: 100px;
+       font-size: 30px;
+     }
+   }
   }
 }@media (max-width: 480px){
   #hero{
+    height: 450px;
+    margin-top: 110px;
     .hero{
-      .parent{
-        margin-top: 170px;
+      &--parent{
         h1{
-          font-size: 24px;
+          font-size: 28px;
         }
         p{
-          font-size: 16px;
+          font-size: 14px;
         }
       }
     }
@@ -28,32 +33,32 @@
 @media (max-width: 414px){
   .container {
     .hero {
-      .parent {
+      &--parent {
         margin-top: 90px;
       }
     }
     .h1 {
-      font-size: 20px;
+      font-size: 18px;
 
-      margin: 0;
     }
   }
 }
 @media (max-width: 375px){
-  .container{
-    .hero{
-      margin-top: 25px;
-      .parent {
-        padding: 0;
-        h1 {
-          font-size: 18px;
+    #hero{
+      height: 400px;
+      .hero{
+        &--parent {
+          padding-top: 70px;
+          h1 {
+            font-size: 20px;
+          }
         }
       }
     }
   }
-}
-@media (max-width: 320px){
-  .hero{
-    margin-top: 80px;
+
+@media (max-width: 321px){
+  #hero{
+    height: 380px;
   }
 }

@@ -10,25 +10,24 @@ const Footer = () => {
                     <div className='footer--block'>
                         <h1>Sign up for our newsletter</h1>
                         <p>Be the first to know about our special offers, news, and updates.</p>
-                        <div className="input-group mb-3">
-                            <input type="email" className="form-control" placeholder="Email address"
-                                   aria-label="Recipient's username" aria-describedby="basic-addon2"/>
+                        <div className="footer--block__input mb-3">
+                            <input type="email" placeholder="Email address"/>
                             <div className="input-group-append">
-                                <button className="btn btn-outline-secondary" type="button">Sign Up</button>
+                                <button  type="button">Sign Up</button>
                             </div>
                         </div>
                     </div>
 
-                    <div className='lorems'>
-                        <div className='footer--title'>
+                    <div className='footer--bottom'>
+                        <div className='footer--bottom__title'>
                             <h4>Our location and contacts</h4>
                             <div>
-                                <p>Bishkek, Kalyk Akiev / Toktogul str., <br/> "Vesna" shopping Mall </p>
+                                <p>Bishkek, Kalyk Akiev / Toktogul str., "Vesna" shopping Mall </p>
                                 <p>Phone +996777848510</p>
                             </div>
 
                         </div>
-                        <div className='footer--title'>
+                        <div className='footer--bottom__title'>
                             <h4>Follow us</h4>
                             <div>
                                 <a href="https://www.instagram.com/danek_books/"><FiInstagram/>  Instagram</a>

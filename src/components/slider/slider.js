@@ -1,6 +1,7 @@
  import React from 'react'
  import Data from "../data";
  import Slider from "react-slick";
+
  const Scrollable = () =>{
     let settings = {
         dots: false,
@@ -45,6 +46,7 @@
             }
         ]
     };
+
     return(
 <section id="slider">
     <div className='container'>

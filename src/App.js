@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="App">
       <Header/>
-        <div style={{marginBottom:"110px"}}/>
         <Routes>
                     <Route path={'/'} element={<Pages/>}/>
                     <Route path={'/cart'} element={<Cart/>}/>

@@ -1,9 +1,12 @@
 @media (max-width: 768px) {
   #header{
-    .header{
-      &--ul{
-        &__li:nth-child(2),:nth-child(3),:nth-child(4),:nth-child(5){
-          display: none;
+    .container{
+      width: 90%;
+      .header{
+        &--ul{
+          &__li:nth-child(2),:nth-child(3),:nth-child(4),:nth-child(5){
+            display: none;
+          }
         }
       }
     }

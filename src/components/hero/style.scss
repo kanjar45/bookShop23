@@ -1,18 +1,25 @@
 #hero{
-  height: 100vh;
+  height: 520px;
   background: url("./../../assets/img/Main image (6).png")no-repeat center/cover;
+  margin-top:110px ;
   .hero{
-    text-align: center;
-    padding-top:27%;
-    h1{
-      font-weight: 900;
-      //font-size: 48px;
-      color: #FFFFFF;
-    }
-    p{
-      font-weight: 500;
-      font-size: 18px;
-      color: #19272E;
-    }
+   &--parent{
+     text-align: center;
+     padding-top: 20%;
+
+     h1{
+       color: var(--background-color, #FFF);
+       font-size: 48px;
+       font-family: Public Sans;
+       font-weight: 700;
+       margin-bottom: 10px;
+     }
+     p{
+       color: var(--text-color, #19272E);
+       font-size: 18px;
+       font-family: Public Sans;
+       line-height: 120%;
+     }
+   }
   }
 }

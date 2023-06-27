@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import Data from "../data";
 import {NavLink} from "react-router-dom";
+
 const AllBooks = () => {
-const [books,setBooks]=useState([])
-    useEffect(()=>{
+    const [books, setBooks] = useState([])
+    useEffect(() => {
         setBooks(Data)
-    },[])
+    }, [])
     return (
         <div id="books">
             <div className="container">
@@ -15,21 +16,26 @@ const [books,setBooks]=useState([])
                         <p>Here you can find all the books you need</p>
                     </div>
                     <div className="books--center">
-                        <div>
-                            <h2>Filters</h2>
-                            <a href="#">Clear filters</a>
+                        <div className="books--center__title">
+                          <div>
+                              <h2>Filters</h2>
+                              <a href="#">Clear filters</a>
+                          </div>
+                            <h5>Genres</h5>
                         </div>
 
-                        <select className="books--center__option">
-                            <option value="value1">popular</option>
-                            <option value="value2">popular</option>
-                            <option value="value3">new</option>
+                        <div className="books--center__select">
+                            <p>Sort by</p>
+                            <select className="books--center__select--option">
+                                <option value="value1">popular</option>
+                                <option value="value2">popular</option>
+                                <option value="value3">new</option>
 
-                        </select>
+                            </select>
+                        </div>
                     </div>
                     <div className="books--bottom">
                         <div className="books--bottom__left">
-                            <h5>Genres</h5>
                             <div className="books--bottom__left--radio">
                                 <input className="radio__input" type="radio"
                                        name="male" id="radio1"/>
@@ -95,13 +101,13 @@ const [books,setBooks]=useState([])
                         <div className="books--bottom__right ">
                             {
                                 books.map((el) => {
-                                return (
-                                    <div key={el.id} className="books--bottom__right--card">
-                                        <div className="books--bottom__right--card__img">
-                                            <NavLink key={el.id} to={`/books/${el.id}`}>
-                                                <img  src={el.image} alt=""/>
-                                            </NavLink>
-                                        </div>
+                                    return (
+                                        <div key={el.id} className="books--bottom__right--card">
+                                            <div className="books--bottom__right--card__img">
+                                                <NavLink key={el.id} to={`/books/${el.id}`}>
+                                                    <img src={el.image} alt=""/>
+                                                </NavLink>
+                                            </div>
 
 
                                             <div>
@@ -110,9 +116,9 @@ const [books,setBooks]=useState([])
                                             </div>
 
 
-                                    </div>
-                                )
-                            })}
+                                        </div>
+                                    )
+                                })}
                         </div>
                     </div>
                 </div>

@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 import Data from "../data";
-import {AiFillHeart, AiFillTwitterCircle, AiOutlineHeart, AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
+import {AiFillHeart, AiOutlineHeart, AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
 import {BiShareAlt} from "react-icons/bi";
-import {BsFacebook, BsInstagram} from "react-icons/bs";
-import {SiWhatsapp} from "react-icons/si";
+
+import Modal from "../pages/modal/modal";
 
 const DetailPage = () => {
     const [books, setBooks] = useState({})
@@ -29,15 +29,15 @@ const DetailPage = () => {
         const card = JSON.parse(localStorage.getItem("card")) || []
         const add = card.find(el => el.id === books.id)
         if (add) {
-          return  card
+            return card
         } else {
-           card.push(books)
+            card.push(books)
         }
         localStorage.setItem("card", JSON.stringify(card))
         return card
     }
     return (
-        <div id="cards">
+        <div id="cards" >
             <div className="container">
                 <div className="cards">
                     <div className="cards--img">
@@ -45,66 +45,28 @@ const DetailPage = () => {
                     </div>
                     <div className="cards--title">
                         <div className="cards--title__top">
-                            <div>
+                            <div className="cards--title__top--text">
                                 <h3>{books.title}</h3>
                                 <p>by{books.author}</p>
                             </div>
 
                             <div className="cards--title__top--icons">
                                 {
-                                    !like ? <AiOutlineHeart onClick={() => {
-                                        liked()
-                                    }
-                                    }/> : <AiFillHeart style={{color: "rgba(243, 51, 51, 0.97)"}} onClick={() => {
-                                        liked()
-                                    }
-                                    }/>
+                                    !like ?
+                                        <AiOutlineHeart onClick={liked} className="cards--title__top--icons__heart"/>
+                                        :
+                                        <AiFillHeart onClick={liked} style={{color: "#ec2727"}}
+                                                     className="cards--title__top--icons__heart"/>
                                 }
-                                <BiShareAlt onClick={() => {
+                                <BiShareAlt className="cards--title__top--icons__share" onClick={() => {
                                     setModal(!modal)
-                                }} style={{marginLeft: "10px"}}/>
+                                }}/>
                             </div>
                         </div>
-                        {
-                            modal &&
-                            <div className="cards--title__modal">
-                                <h5>General access</h5>
-                                <div className="cards--title__modal--icons">
-                                    <div>
-                                        <a href="https://www.instagram.com/direct/inbox/">
-                                            <BsInstagram className="icon1 icon"/>
-                                        </a>
-                                        <p>Instagram</p>
-                                    </div>
-                                    <div>
-                                        <a href="https://www.facebook.com/">
-                                            <BsFacebook className="icon2 icon"/>
-                                        </a>
-                                        <p>Facebook</p>
-                                    </div>
-                                    <div>
-                                        <a href="https://twitter.com/">
-                                            <AiFillTwitterCircle className="icon3 icon"/>
-                                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid iusto magnam officia
+                            repellat ullam unde?</p>
+                        <h1>$ {books.price * quantity}</h1>
 
-                                        <p>Twitter</p>
-                                    </div>
-                                    <div>
-                                        <a href="https://web.whatsapp.com/">
-                                            <SiWhatsapp className="icon4 icon"/>
-                                        </a>
-
-                                        <p>WhatsApp</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        }
-                        <div className="cards--title__center">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid iusto magnam officia
-                                repellat ullam unde?</p>
-                            <h1>$ {books.price * quantity}</h1>
-                        </div>
                         <div className="cards--title__bottom">
                             <button className="cards--title__bottom--btn" onClick={() => {
                                 addToBasket(books)
@@ -122,6 +84,12 @@ const DetailPage = () => {
                     </div>
                 </div>
             </div>
+            {modal &&
+
+                <Modal modal={()=>{
+                setModal(false)}
+                }/>
+            }
         </div>
     );
 };

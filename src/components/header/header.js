@@ -40,6 +40,7 @@ const Header = () => {
                         <BiSearch className="header--icons__search "/>
                         <Link to={'/cart'}>
                             <HiOutlineShoppingBag className="header--icons__basket"/>
+
                         </Link>
                         <div className="header--icons__burger">
                             <button className="header--icons__burger--btn" onClick={()=>{

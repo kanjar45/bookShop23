@@ -29,7 +29,7 @@ const DetailPage = () => {
         const card = JSON.parse(localStorage.getItem("card")) || []
         const add = card.find(el => el.id === books.id)
         if (add) {
-          return  [...card]
+          return  card
         } else {
            card.push(books)
         }

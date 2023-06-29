@@ -16,11 +16,9 @@
       display: flex;
       align-items: center;
       flex-wrap: wrap;
-
       &__li {
         list-style-type: none;
         margin-right: 15px;
-
         &--title {
           color: var(--text-color, #19272E);
           font-size: 19px;
@@ -29,7 +27,24 @@
           letter-spacing: -0.6px;
         }
       }
-    }
+      &__burger{
+        display: flex;
+        align-items: center;
+        &--li {
+          list-style-type: none;
+          margin-right: 15px;
+          &__title{
+              color: var(--text-color, #19272E);
+              font-size: 19px;
+              font-family: Public Sans;
+              font-weight: 500;
+              letter-spacing: -0.6px;
+
+          }
+        }
+      }
+
+      }
 
     .active {
       color: var(--main-color, #818EEA);
@@ -38,6 +53,7 @@
       font-weight: 700;
       letter-spacing: -0.6px;
     }
+
 
     &--icons {
       display: flex;
@@ -56,6 +72,8 @@
       }
 
       &__burger {
+        display: none;
+        z-index: 2;
         &--btn {
           position: relative;
           width: 35px;

@@ -1,22 +1,32 @@
 import React from 'react';
 
 import {IoIosArrowForward} from "react-icons/io";
-const Cart = () => {
+const Cart = ({props}) => {
     return (
-        <div className='cart'>
+        <>
             <div className="yourCart">
                 <div className="zagalovok">
                     <h1>Your cart</h1>
                     <p>Not ready to checkout? <a href="http://localhost:3000/">Continue Shopping </a></p>
-                    <div></div>
+                    <div>
+                        {
+                            props.map((el)=>(
+                                console.log(el)
+                                // <div>
+                                //      <h1>{el.title}</h1>
+                                // </div>
+                            ))
+                        }
+                    </div>
                 </div>
             </div>
+
             <div className="cart_content">
                 <h1>Order Summary</h1>
                 <div className="order">
                     <div className="shipping">
                         <h5>Shipping</h5>
-                        <h5>Select Method <IoIosArrowForward/></h5>
+                        <h5 className='select1'>Select Method <IoIosArrowForward/></h5>
                     </div>
                     <div className="Payment">
                         <h5>Payment</h5>
@@ -30,8 +40,7 @@ const Cart = () => {
                 </div>
                 <button>Continue to checkout</button>
             </div>
-            <div></div>
-        </div>
+        </>
     );
 };
 

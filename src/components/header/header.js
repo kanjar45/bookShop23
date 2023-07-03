@@ -6,33 +6,33 @@ import {HiOutlineShoppingBag} from "react-icons/hi";
 import transitionEndListener from "react-bootstrap/transitionEndListener";
 
 const Header = () => {
-    const [burger,setBurger]=useState(false)
+    const [burger, setBurger] = useState(false)
     return (
         <div id="header">
             <div className="container">
-                <div className={`header ${burger? "open" : ""} `}>
-                    <ul className="header--ul">
+                <div className="header  ">
+                    <ul className="header--ul"  onClick={()=>{
+                        setBurger(false)
+                    }}>
                         <li className="header--ul__li">
                             <NavLink to={"/"} className="header--ul__li--title ">Bookshop</NavLink>
                         </li>
-                      <div className="header--ul__burger " style={{
-                          transition: burger ? "margin-left 3s" : " margin-left 3s",
-                          display:burger ? "block" : ""
-
-                      }}>
-                          <li className="header--ul__burger--li">
-                              <NavLink to={"/books"} className="header--ul__burger--li__title">Categories</NavLink>
-                          </li>
-                          <li className="header--ul__burger--li">
-                              <NavLink to={"/recent"} className="header--ul__burger--li__title">Recent</NavLink>
-                          </li>
-                          <li className="header--ul__burger--li">
-                              <NavLink to={"/hello"} className="header--ul__burger--li__title">Books</NavLink>
-                          </li>
-                          <li className="header--ul__burger--li">
-                              <NavLink to={"/about"} className="header--ul__burger--li__title">About Us</NavLink>
-                          </li>
-                      </div>
+                        <div className="header--ul__burger" style={{
+                            right: burger ? "0" : "-340px"
+                        }}>
+                            <li className="header--ul__burger--li" >
+                                <NavLink to={"/books"} className="header--ul__burger--li__title" >Categories</NavLink>
+                            </li>
+                            <li className="header--ul__burger--li">
+                                <NavLink to={"/recent"} className="header--ul__burger--li__title">Recent</NavLink>
+                            </li>
+                            <li className="header--ul__burger--li">
+                                <NavLink to={"/hello"} className="header--ul__burger--li__title">Books</NavLink>
+                            </li>
+                            <li className="header--ul__burger--li">
+                                <NavLink to={"/about"} className="header--ul__burger--li__title">About Us</NavLink>
+                            </li>
+                        </div>
 
 
                     </ul>
@@ -43,18 +43,21 @@ const Header = () => {
 
                         </Link>
                         <div className="header--icons__burger">
-                            <button className="header--icons__burger--btn" onClick={()=>{
+                            <button className="header--icons__burger--btn" onClick={() => {
                                 setBurger(!burger)
                             }}>
                                    <span style={{
-                                       transform : burger ? "translateY(0) rotate(45deg)" : ""
+                                       transform: burger ? "translateY(0) rotate(45deg)" : "",
+                                       transition: ".3s"
                                    }}></span>
-                                   <span style={{
-                                       display: burger ? "none" : ""
-                                   }}></span>
-                                   <span style={{
-                                       transform : burger ? "translateY(0) rotate(-45deg)" : ""
-                                   }}></span>
+                                <span style={{
+                                    display: burger ? "none" : "",
+                                    transition: "1s"
+                                }}></span>
+                                <span style={{
+                                    transform: burger ? "translateY(0) rotate(-45deg)" : "",
+                                    transition: ".3s"
+                                }}></span>
 
                             </button>
                         </div>

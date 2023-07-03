@@ -6,9 +6,8 @@
       .header {
         &--ul {
           &__burger {
-            display: none;
             position: absolute;
-            right: 0;
+transition: 1s;
             top: 0;
             background: white;
             flex-direction: column;

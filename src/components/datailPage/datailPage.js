@@ -6,7 +6,7 @@ import {BiShareAlt} from "react-icons/bi";
 
 import Modal from "../pages/modal/modal";
 
-const DetailPage = () => {
+const DetailPage = ({createCart}) => {
     const [books, setBooks] = useState({})
     const [quantity, setQuantity] = useState(1)
     const card = JSON.parse(localStorage.getItem("card")) || []
@@ -34,7 +34,15 @@ const DetailPage = () => {
             card.push(books)
         }
         localStorage.setItem("card", JSON.stringify(card))
-        return card
+        return setCart(card)
+    }
+    const [cart,setCart] = useState('')
+    function addCart() {
+        let newCart = {
+            card:cart,
+            i:Date.now()
+        }
+        createCart(newCart)
     }
     return (
         <div id="cards" >
@@ -69,6 +77,7 @@ const DetailPage = () => {
 
                         <div className="cards--title__bottom">
                             <button className="cards--title__bottom--btn" onClick={() => {
+                                addCart()
                                 addToBasket(books)
                                 console.log(card)
                             }}>Add to Cart

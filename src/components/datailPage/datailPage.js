@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+import {NavLink, useParams} from "react-router-dom";
 import Data from "../data";
 import {AiFillHeart, AiOutlineHeart, AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
 import {BiShareAlt} from "react-icons/bi";
@@ -7,23 +7,35 @@ import {BiShareAlt} from "react-icons/bi";
 import Modal from "../pages/modal/modal";
 
 const DetailPage = () => {
-    const [books, setBooks] = useState({})
+    let initialValue = localStorage.getItem('like');
+    initialValue = initialValue ? JSON.parse(initialValue) : false;
+    const [books, setBooks] = useState(JSON.parse(localStorage.getItem("books")) || {})
     const [quantity, setQuantity] = useState(1)
     const card = JSON.parse(localStorage.getItem("card")) || []
     const [modal, setModal] = useState(false)
     const {id} = useParams();
-    const [like, setLike] = useState(false)
+    const [like, setLike] = useState( initialValue)
+    const [goBasket, setGoBasket] = useState(false)
+    books.quantity = quantity
     const liked = () => {
-        setLike(!like)
+        let newLike= !like
+        setLike(newLike)
+        localStorage.setItem('like', JSON.stringify(newLike))
     }
+
     useEffect(() => {
-        setBooks(Data[id - 1])
+        setBooks(Data.find((el) => {
+            if (el.id === +id) {
+                return el
+            }
+        }))
     }, [id])
+
     const addQuantity = () => {
         setQuantity(quantity + 1)
     }
     const deleteQuantity = () => {
-        setQuantity(quantity > 1 ? quantity - 1 : quantity)
+        setQuantity(quantity - 1 !== 0 ? quantity - 1 : quantity)
     }
     const addToBasket = (books) => {
         const card = JSON.parse(localStorage.getItem("card")) || []
@@ -37,7 +49,7 @@ const DetailPage = () => {
         return card
     }
     return (
-        <div id="cards" >
+        <div id="cards">
             <div className="container">
                 <div className="cards">
                     <div className="cards--img">
@@ -68,11 +80,18 @@ const DetailPage = () => {
                         <h1>$ {books.price * quantity}</h1>
 
                         <div className="cards--title__bottom">
-                            <button className="cards--title__bottom--btn" onClick={() => {
-                                addToBasket(books)
-                                console.log(card)
-                            }}>Add to Cart
-                            </button>
+
+                            {
+                                goBasket? <NavLink to={"/cart"} >
+                                        <button className="cards--title__bottom--btn">
+                                            Go to basket</button>
+                                    </NavLink>
+                                    :    <button className="cards--title__bottom--btn" onClick={() => {
+                                        addToBasket(books)
+                                    setGoBasket(!goBasket)
+                                    }}>Add to Card</button>
+                            }
+
                             <button className="cards--title__bottom--btn2">
                                 <AiOutlineMinus className="icon" style={{
                                     color: quantity === 1 ? "grey" : ""
@@ -85,13 +104,14 @@ const DetailPage = () => {
                 </div>
             </div>
             {modal &&
-
-                <Modal modal={()=>{
-                setModal(false)}
+                <Modal modal={() => {
+                    setModal(false)
+                }
                 }/>
             }
         </div>
     );
 };
+
 
 export default DetailPage;

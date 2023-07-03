@@ -8,7 +8,7 @@ import {BiAt, BiSolidShareAlt} from "react-icons/bi";
 
 const Modal = ({modal}) => {
     return (
-        <div id="modal">
+        <div id="modal" >
             <div className="modal">
                 <div className="modal--header">
                     <h1>Share with</h1>

@@ -5,158 +5,162 @@
     display: flex;
     flex-direction: column;
 
-    &--title {
-      margin: 30px 0;
+   &--top{
+     &__title {
+       margin: 40px 0 70px 0;
 
-      h1 {
-        color: var(--text-color, #19272E);
-        font-size: 36px;
-        font-family: Public Sans;
-        font-weight: 600;
-        line-height: 48px;
-      }
+       h1 {
+         color: var(--text-color, #19272E);
+         font-size: 36px;
+         font-family: Public Sans;
+         font-weight: 600;
+       }
 
-      p {
-        color: var(--text-color, #19272E);
-        font-size: 20px;
-        font-family: Public Sans;
-        letter-spacing: -0.4px;
-        opacity: 0.699999988079071;
-        margin: 10px 0;
+       p {
+         color: var(--text-color, #19272E);
+         font-size: 20px;
+         font-family: Public Sans;
+         letter-spacing: -0.4px;
+         opacity: 0.699999988079071;
+         margin: 15px 0;
+       }
+     }
 
-      }
-    }
+     &__filter {
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       margin-bottom: 40px;
 
-    &--center {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
+       &--title {
 
-      &__title {
+         display: flex;
+         justify-content: space-between;
+         align-items: flex-end;
+         gap: 8px;
 
+         h2 {
+           color: var(--text-color, #19272E);
+           font-size: 22px;
+           font-family: Public Sans;
+           font-style: normal;
+           font-weight: 600;
+           line-height: 30px;
+           letter-spacing: -0.55px;
+         }
 
-      div{
-        display: flex;
-        align-items: center;
-        h2 {
-          color: var(--text-color, #19272E);
-          font-size: 22px;
-          font-family: Public Sans;
-          font-weight: 600;
-          line-height: 30px;
-          margin-right: 10px;
-        }
+         a {
+           color: var(--main-color, #818EEA);
+           font-size: 14px;
+           font-family: Public Sans;
+           font-style: normal;
+           font-weight: 400;
+           line-height: 20px;
+           letter-spacing: -0.4px;
+           text-decoration-line: underline;
+         }
+       }
+       &--button {
+         display: flex;
+         align-items: center;
+         gap: 20px;
 
-        a {
-          color: var(--main-color, #818EEA);
-          font-size: 16px;
-          font-family: Public Sans;
-          line-height: 20px;
-          text-decoration-line: underline;
-        }
-      }
+         &__select {
+           display: flex;
+           align-items: center;
+           border-radius: 8px;
+           border: 1px solid var(--main-color, #818EEA);
+           width: 160px;
+           height: 37px;
+           padding: 0 5px;
 
-        h5{
-          color: var(--text-color, #19272E);
-          font-size: 18px;
-          font-family: Public Sans;
-          font-weight: 700;
-          margin: 15px 0 10px 0;
-        }
-      }
+           p {
+             color: var(--main-color, #818EEA);
+             font-size: 16px;
+             font-family: Inter;
+             margin-right: 10px;
+             opacity: 0.5;
+           }
 
-      &__select {
-        display: flex;
-        align-items: center;
-        border-radius: 8px;
-        border: 1px solid var(--main-color, #818EEA);
-        padding: 5px 10px;
+           &--option {
+             border: none;
+             border-radius: 7px;
+             color: rgba(129, 142, 234, 1);
+             text-align: center;
 
-        p {
-          color: var(--main-color, #818EEA);
-          font-size: 16px;
-          font-family: Inter;
-          line-height: 26px;
-          margin-right: 10px;
-          opacity: 0.5;
-        }
+             font-size: 20px;
+             outline: none;
+           }
+         }
+         &__burger{
+display: none;
+           font-size: 20px;
+           padding: 7px 7px 4px 7px;
+           border-radius: 8px;
+           border: 1px solid var(--main-color, #818EEA);
+           background: transparent;
+           cursor: pointer;
 
-        &--option {
-          border: none;
-          border-radius: 7px;
-          color: rgba(129, 142, 234, 1);
-          text-align: center;
-          padding: 8px;
-          font-size: 20px;
-          outline: none;
-        }
-      }
-
-    }
+         }
+       }
+     }
+   }
 
     &--bottom {
-      display: flex;
-      justify-content: space-between;
-      align-items: start;
-
-      &__left {
-        width: 40%;
-        &--radio {
-          margin: 10px 0;
-          display: flex;
-          align-items:center;
-          input{
-            width: 20px;
-            height: 21px;
-          }
-          label{
-            margin:0 0 5px 10px;
-          }
-        }
+      h2 {
+        color: var(--text-color, #19272E);
+        font-size: 16px;
+        font-family: Public Sans;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: -0.4px;
+        margin-bottom: 30px;
       }
 
-      &__right {
+      &__genres {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: flex-end;
+        align-items: start;
 
 
-        &--card {
+
+        &--right {
           display: flex;
-          flex-direction: column;
-          align-items: start;
-          margin-bottom: 30px;
+          flex-wrap: wrap;
+          justify-content: space-between;
 
+          &__card {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            margin-bottom: 30px;
 
-          &__img {
+            &--img {
+              margin-right: 10px;
 
-            width: 250px;
-            margin-right: 10px;
+              img {
+                width: 200px;
+              }
+            }
 
-            img {
+            &--title {
               width: 200px;
+
+              h5 {
+                color: var(--text-color, #19272E);
+                font-size: 18px;
+                font-family: Public Sans;
+                font-weight: 700;
+                margin: 10px 0;
+              }
+
+              p {
+                color: var(--text-color, #19272E);
+                font-size: 16px;
+                font-family: Public Sans;
+              }
             }
           }
-
-          div {
-            width: 200px;
-
-            h5 {
-              color: var(--text-color, #19272E);
-              font-size: 18px;
-              font-family: Public Sans;
-              font-weight: 700;
-              margin: 10px 0;
-            }
-
-            p {
-              color: var(--text-color, #19272E);
-              font-size: 16px;
-              font-family: Public Sans;
-            }
-          }
-
         }
       }
     }

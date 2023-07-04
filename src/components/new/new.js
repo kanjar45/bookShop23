@@ -14,17 +14,17 @@ const New = () => {
                <div className='new--cards'>
                    <div className='new--cards__card'>
                        <img src={new1} alt=""/>
-                       <h4>The Climate Book: <br/> The Facts and the <br/> Solutions</h4>
+                       <h4>THE CLIMATE BOOK: <br/> THE FACTS AND THE <br/> SOLUTIONS</h4>
                        <p>by Greta Thunberg</p>
                    </div>
                    <div className='new--cards__card2'>
                        <img src={new2} alt=""/>
-                       <h4>Rest Is Resistance: <br/> A Manifesto</h4>
+                       <h4>REST IS RESISTANCE: <br/> A MANIFESTO</h4>
                        <p>by Tricia Hersey</p>
                    </div>
                    <div className='new--cards__card3'>
                        <img src={new3} alt=""/>
-                       <h4>A New Name: <br/> Septology VI-VII</h4>
+                       <h4>A NEW NAME: <br/> SEPTOLOGY VI-VII</h4>
                        <p>by Jon Fosse</p>
                    </div>
                </div>

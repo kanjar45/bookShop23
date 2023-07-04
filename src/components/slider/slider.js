@@ -40,7 +40,7 @@
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     slidesToScroll: 1
                 }
             }
@@ -51,9 +51,8 @@
 <section id="slider">
     <div className='container'>
         <div className="slider">
-<h1>Books</h1>
-
-           <div className="slider--cards">
+            <h1>Books</h1>
+            <div className="slider--cards">
                <Slider {...settings}>
                {
                    Data.map((el) => {

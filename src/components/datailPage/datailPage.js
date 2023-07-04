@@ -1,40 +1,62 @@
 import React, {useEffect, useState} from 'react';
-import {useParams} from "react-router-dom";
+import {NavLink, useParams} from "react-router-dom";
 import Data from "../data";
-import {AiFillHeart, AiFillTwitterCircle, AiOutlineHeart, AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
+import {AiFillHeart, AiOutlineHeart, AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
 import {BiShareAlt} from "react-icons/bi";
-import {BsFacebook, BsInstagram} from "react-icons/bs";
-import {SiWhatsapp} from "react-icons/si";
 
-const DetailPage = () => {
+import Modal from "../pages/modal/modal";
+
+const DetailPage = ({createCart}) => {
     const [books, setBooks] = useState({})
+const DetailPage = () => {
+    let initialValue = localStorage.getItem('like');
+    initialValue = initialValue ? JSON.parse(initialValue) : false;
+    const [books, setBooks] = useState(JSON.parse(localStorage.getItem("books")) || {})
     const [quantity, setQuantity] = useState(1)
     const card = JSON.parse(localStorage.getItem("card")) || []
     const [modal, setModal] = useState(false)
     const {id} = useParams();
-    const [like, setLike] = useState(false)
+    const [like, setLike] = useState( initialValue)
+    const [goBasket, setGoBasket] = useState(false)
+    books.quantity = quantity
     const liked = () => {
-        setLike(!like)
+        let newLike= !like
+        setLike(newLike)
+        localStorage.setItem('like', JSON.stringify(newLike))
     }
+
     useEffect(() => {
-        setBooks(Data[id - 1])
+        setBooks(Data.find((el) => {
+            if (el.id === +id) {
+                return el
+            }
+        }))
     }, [id])
+
     const addQuantity = () => {
         setQuantity(quantity + 1)
     }
     const deleteQuantity = () => {
-        setQuantity(quantity > 1 ? quantity - 1 : quantity)
+        setQuantity(quantity - 1 !== 0 ? quantity - 1 : quantity)
     }
     const addToBasket = (books) => {
         const card = JSON.parse(localStorage.getItem("card")) || []
         const add = card.find(el => el.id === books.id)
         if (add) {
-          return  card
+            return card
         } else {
-           card.push(books)
+            card.push(books)
         }
         localStorage.setItem("card", JSON.stringify(card))
-        return card
+        return setCart(card)
+    }
+    const [cart,setCart] = useState('')
+    function addCart() {
+        let newCart = {
+            card:cart,
+            i:Date.now()
+        }
+        createCart(newCart)
     }
     return (
         <div id="cards">
@@ -45,72 +67,47 @@ const DetailPage = () => {
                     </div>
                     <div className="cards--title">
                         <div className="cards--title__top">
-                            <div>
+                            <div className="cards--title__top--text">
                                 <h3>{books.title}</h3>
                                 <p>by{books.author}</p>
                             </div>
 
                             <div className="cards--title__top--icons">
                                 {
-                                    !like ? <AiOutlineHeart onClick={() => {
-                                        liked()
-                                    }
-                                    }/> : <AiFillHeart style={{color: "rgba(243, 51, 51, 0.97)"}} onClick={() => {
-                                        liked()
-                                    }
-                                    }/>
+                                    !like ?
+                                        <AiOutlineHeart onClick={liked} className="cards--title__top--icons__heart"/>
+                                        :
+                                        <AiFillHeart onClick={liked} style={{color: "#ec2727"}}
+                                                     className="cards--title__top--icons__heart"/>
                                 }
-                                <BiShareAlt onClick={() => {
+                                <BiShareAlt className="cards--title__top--icons__share" onClick={() => {
                                     setModal(!modal)
-                                }} style={{marginLeft: "10px"}}/>
+                                }}/>
                             </div>
                         </div>
-                        {
-                            modal &&
-                            <div className="cards--title__modal">
-                                <h5>General access</h5>
-                                <div className="cards--title__modal--icons">
-                                    <div>
-                                        <a href="https://www.instagram.com/direct/inbox/">
-                                            <BsInstagram className="icon1 icon"/>
-                                        </a>
-                                        <p>Instagram</p>
-                                    </div>
-                                    <div>
-                                        <a href="https://www.facebook.com/">
-                                            <BsFacebook className="icon2 icon"/>
-                                        </a>
-                                        <p>Facebook</p>
-                                    </div>
-                                    <div>
-                                        <a href="https://twitter.com/">
-                                            <AiFillTwitterCircle className="icon3 icon"/>
-                                        </a>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid iusto magnam officia
+                            repellat ullam unde?</p>
+                        <h1>$ {books.price * quantity}</h1>
 
-                                        <p>Twitter</p>
-                                    </div>
-                                    <div>
-                                        <a href="https://web.whatsapp.com/">
-                                            <SiWhatsapp className="icon4 icon"/>
-                                        </a>
-
-                                        <p>WhatsApp</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        }
-                        <div className="cards--title__center">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid iusto magnam officia
-                                repellat ullam unde?</p>
-                            <h1>$ {books.price * quantity}</h1>
-                        </div>
                         <div className="cards--title__bottom">
                             <button className="cards--title__bottom--btn" onClick={() => {
+                                addCart()
                                 addToBasket(books)
                                 console.log(card)
                             }}>Add to Cart
                             </button>
+
+                            {
+                                goBasket? <NavLink to={"/cart"} >
+                                        <button className="cards--title__bottom--btn">
+                                            Go to basket</button>
+                                    </NavLink>
+                                    :    <button className="cards--title__bottom--btn" onClick={() => {
+                                        addToBasket(books)
+                                    setGoBasket(!goBasket)
+                                    }}>Add to Card</button>
+                            }
+
                             <button className="cards--title__bottom--btn2">
                                 <AiOutlineMinus className="icon" style={{
                                     color: quantity === 1 ? "grey" : ""
@@ -122,8 +119,15 @@ const DetailPage = () => {
                     </div>
                 </div>
             </div>
+            {modal &&
+                <Modal modal={() => {
+                    setModal(false)
+                }
+                }/>
+            }
         </div>
     );
 };
+
 
 export default DetailPage;

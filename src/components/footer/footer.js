@@ -1,6 +1,9 @@
 import React from 'react';
 import {FiInstagram} from "react-icons/fi";
 import {BsWhatsapp} from "react-icons/bs";
+import {LiaTelegram} from "react-icons/lia";
+import {PiTelegramLogoDuotone} from "react-icons/pi";
+import {MdOutlineAlternateEmail} from "react-icons/md";
 
 const Footer = () => {
     return (
@@ -34,8 +37,9 @@ const Footer = () => {
                             <div>
                                 <a href="https://www.instagram.com/danek_books/"><FiInstagram/></a>
                                 <a href="https://api.whatsapp.com/send/?phone=996777858410&text&type=phone_number&app_absent=0"><BsWhatsapp/></a>
-                                <a href=""></a>
-                                <a href=""></a>
+                                <a href=""><PiTelegramLogoDuotone/></a>
+                                <a href=""><MdOutlineAlternateEmail/></a>
+
                             </div>
 
                         </div>

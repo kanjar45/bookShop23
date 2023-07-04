@@ -26,8 +26,12 @@
     }
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 599px) {
   .footer{
-
+&--bottom{
+  display: flex;
+  justify-content: flex-start;
+  //margin-left: 0;
+}
   }
 }

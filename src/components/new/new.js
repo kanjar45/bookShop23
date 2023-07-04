@@ -1,4 +1,5 @@
 import React from 'react';
+import './newMedia.scss'
 import new1 from '../../assets/img/image 6.png'
 import new2 from "../../assets/img/image 5.png"
 import new3 from "../../assets/img/image 7.png"

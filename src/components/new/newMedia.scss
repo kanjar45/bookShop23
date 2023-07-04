@@ -11,7 +11,7 @@
       &__card{
           margin-top: 0 !important;
       }
-      &__card3{
+      &__card:nth-child(3){
           margin-top: 0!important;
       }
     }
@@ -21,15 +21,31 @@
   }
 
 }
-
-
-@media (max-width: 575px){
-.new {
-  &--cards{
-    &__card{
-
+@media (max-width: 890px) {
+  #new{
+    .new{
+      &--cards{
+        gap: 60px;
+        &__card{
+          max-width: 190px;
+          height: 290px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 800px) {
+  #new{
+    .new{
+      &--cards{
+        gap: 40px;
+        &__card{
+          max-width: 190px;
+          height: 290px;
+        }
+      }
     }
   }
 }
 
-  }
+

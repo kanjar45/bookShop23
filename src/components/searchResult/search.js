@@ -22,6 +22,7 @@ const Search = () => {
             <img src={result.image} alt=""/>
             <h2>{result.title}</h2>
             <p>by {result.author}</p>
+            <p>${result.price}</p>
         </div>
     );
 };

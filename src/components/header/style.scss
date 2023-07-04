@@ -15,6 +15,13 @@
       display: flex;
      align-items: center;
      flex-wrap: wrap;
+     .active{
+       color: var(--main-color, #818EEA);
+       font-size: 20px;
+       font-family: Public Sans;
+       font-weight: 700;
+       letter-spacing: -0.6px;
+     }
       &__li{
         list-style-type: none;
         margin-right: 15px;
@@ -53,27 +60,69 @@
 
       }
 
-    .active{
-      color: var(--main-color, #818EEA);
-      font-size: 20px;
-      font-family: Public Sans;
-      font-weight: 700;
-      letter-spacing: -0.6px;
-    }
     &--icons{
       display: flex;
       justify-content: space-around;
     align-items: center;
-      &__search{
-        font-size: 20px;
-        margin-right:20px;
-        cursor: pointer;
-      }
+      gap: 10px;
+.active{
+  width: 20px ;
+  height: 20px;
+  position: relative;
+  transition: 1s;
+  background:transparent;
+ .header--icons__search--icon{
+position: absolute;
+color: black;
+   top:11px ;
+left: 10px;
+ }
+  .header--icons__search--clear{
+    display: none;
+  }
+
+}
+&__search{
+  width: 250px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 20px;
+  padding: 10px;
+  transition: 1s;
+  background: rgba(128, 128, 128, 0.71);
+  &--icon{
+    font-size: 20px;
+    margin-right:20px;
+    cursor: pointer;
+  }
+  &--input{
+    ::-webkit-input-placeholder{
+    color: rgba(255, 255, 255, 0.65);
+  }
+    input{
+
+      color: white;
+      background: transparent;
+      border: none;
+      outline: none;
+
+
+
+    }
+  }
+  &--clear{
+  margin-left:20px;
+    font-size: 20px;
+cursor: pointer;
+  }
+}
+
       &__basket{
         font-size: 20px;
         color: rgba(25, 39, 46, 1);
       }
-
       &__burger {
         display: none;
         z-index: 2;

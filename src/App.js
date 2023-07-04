@@ -1,7 +1,6 @@
 import './App.scss';
 import Footer from "./components/footer/footer";
 import Pages from "./components/pages/pages";
-import Header from "./components/header/header";
 
 
 import Cart from "./components/myCart/Cart";
@@ -10,6 +9,7 @@ import AllBooks from "./components/allBooks/AllBooks";
 import DetailPage from "./components/datailPage/datailPage";
 import About from "./components/aboutUs/about";
 import {useState} from "react";
+import Header from "./components/header/header";
 
 function App() {
     const [props,setProps] = useState([])

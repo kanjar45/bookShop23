@@ -2,9 +2,15 @@
   background: #818EEA;
   .footer {
     display: flex;
+
+    justify-content: space-around;
+    //align-items: start;
+    padding: 80px 0;
+
     justify-content: space-between;
     align-items: start;
     padding: 100px 0;
+
 
     &--block {
       padding-bottom: 20px;
@@ -63,9 +69,9 @@
 
     &--bottom {
      display: flex;
-      justify-content: end;
-      align-items: start;
+      justify-content: center;
       flex-wrap: wrap;
+      padding: 20px 0 0 0;
 
 &__title:nth-child(1){
   margin-right: 20px;
@@ -76,6 +82,7 @@
         margin-left: 20px;
       }
       &__title {
+
         h4 {
           color: var(--background-color, #FFF);
           font-size: 16px;
@@ -86,16 +93,14 @@
         }
 
         div {
-          display: flex;
-          flex-direction: column;
-
+          //display: flex;
           width: 200px;
-
           a {
             color: var(--background-color, #FFF);
             font-size: 16px;
             font-family: Public Sans;
             font-weight: 400;
+            margin: 0 10px 0 0;
           }
 
           p {

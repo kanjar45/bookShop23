@@ -22,7 +22,9 @@ const Footer = () => {
                         <div className='footer--bottom__title'>
                             <h4>Our location and contacts</h4>
                             <div>
-                                <p>Bishkek, Kalyk Akiev / Toktogul str., "Vesna" shopping Mall </p>
+                                <p>Bishkek, Kalyk Akiev / Toktogul str.,
+                                    "Vesna" shopping Mall </p>
+
                                 <p>Phone +996777848510</p>
                             </div>
 
@@ -30,8 +32,10 @@ const Footer = () => {
                         <div className='footer--bottom__title'>
                             <h4>Follow us</h4>
                             <div>
-                                <a href="https://www.instagram.com/danek_books/"><FiInstagram/>  Instagram</a>
-                                <a href="https://api.whatsapp.com/send/?phone=996777858410&text&type=phone_number&app_absent=0"><BsWhatsapp/>  WhatApp</a>
+                                <a href="https://www.instagram.com/danek_books/"><FiInstagram/></a>
+                                <a href="https://api.whatsapp.com/send/?phone=996777858410&text&type=phone_number&app_absent=0"><BsWhatsapp/></a>
+                                <a href=""></a>
+                                <a href=""></a>
                             </div>
 
                         </div>

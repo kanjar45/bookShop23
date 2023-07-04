@@ -5,8 +5,8 @@ import {BiSearch} from "react-icons/bi";
 import {HiOutlineShoppingBag} from "react-icons/hi";
 import {IoIosClose} from "react-icons/io";
 
+
 const Header = () => {
-    const [burger, setBurger] = useState(false)
     const [search, setSearch] = useState(false)
 
     return (
@@ -74,6 +74,7 @@ const Header = () => {
                                 }}></span>
 
                             </button>
+
                         </div>
                     </div>
 

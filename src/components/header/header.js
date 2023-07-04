@@ -28,6 +28,12 @@ const Header = () => {
 
                         </ul>
                         <div className="header--icons" >
+
+                            <BiSearch className="header--icons__search "/>
+                            <Link to={'/cart'}>
+                                <HiOutlineShoppingBag  className="header--icons__basket"/>
+                            </Link>
+
                             <div className="header--search">
                                     <BiSearch className="header--icons__search "/>
                             </div>
@@ -88,6 +94,7 @@ const Header = () => {
                                 }}></span>
 
                             </button>
+
                         </div>
                     </div>
 

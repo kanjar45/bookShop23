@@ -10,6 +10,7 @@ import DetailPage from "./components/datailPage/datailPage";
 import About from "./components/aboutUs/about";
 import {useState} from "react";
 import Header from "./components/header/header";
+import Search from "./components/searchResult/search";
 
 function App() {
     const [props,setProps] = useState([])
@@ -28,6 +29,7 @@ function App() {
                     <Route path={"/books"} element={<AllBooks/>}/>
                     <Route path={"/books/:id"} element={<DetailPage createCart ={createCart}/>}/>
                     <Route path={"/about"} element={<About/>}/>
+                    <Route path={"/books-search/:booksName"} element={<Search/>}/>
 
         </Routes>
 

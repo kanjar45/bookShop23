@@ -1,14 +1,18 @@
 import React, {useState} from 'react';
-import {NavLink, Link} from "react-router-dom";
+import {NavLink, Link, useNavigate} from "react-router-dom";
 
 import {BiSearch} from "react-icons/bi";
 import {HiOutlineShoppingBag} from "react-icons/hi";
-import {IoIosClose} from "react-icons/io";
 
 
 const Header = () => {
     const [search, setSearch] = useState(false)
-
+    const [burger, setBurger] = useState(false)
+    const [value, setValue] = useState("")
+    const navigate=useNavigate()
+    const handleChange=(name)=>{
+        navigate(`/books-search/${name}`)
+    }
     return (
         <div id="header">
             <div className="container">
@@ -40,17 +44,27 @@ const Header = () => {
                     </ul>
                     <div className="header--icons">
                         <div className={`header--icons__search ${search ? "" : "active"}`}>
-                            <BiSearch className="header--icons__search--icon "
-                                      onClick={(e) => {
-                                          setSearch(!search)
-                                      }}
-                            />
                             <div className="header--icons__search--input">
                                 <input type="text" placeholder={`${search ? "Search" : ""}`} style={{
                                     display: search ? "block" : "none",
+                                }} onChange={(e) => {
+                                    setValue(e.target.value)
+
                                 }}/>
                             </div>
-                            <IoIosClose className="header--icons__search--clear"/>
+                            <div className="header--icons__search--right">
+                                <button style={{
+                                    display: value.length === 0 ? "none" :
+                                        "block" && search ? "block" : "none"
+                                }} className="header--icons__search--right__clear">
+                                    &times;
+                                </button>
+                                <BiSearch className="header--icons__search--right__icon "
+                                          onClick={(e) => {
+                                            value.length>0 ? handleChange(value) :   setSearch(!search)
+                                          }}
+                                />
+                            </div>
                         </div>
                         <Link to={'/cart'}>
                             <HiOutlineShoppingBag className="header--icons__basket"/>

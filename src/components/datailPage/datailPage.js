@@ -7,8 +7,6 @@ import {BiShareAlt} from "react-icons/bi";
 import Modal from "../pages/modal/modal";
 
 const DetailPage = ({createCart}) => {
-    const [books, setBooks] = useState({})
-const DetailPage = () => {
     let initialValue = localStorage.getItem('like');
     initialValue = initialValue ? JSON.parse(initialValue) : false;
     const [books, setBooks] = useState(JSON.parse(localStorage.getItem("books")) || {})
@@ -16,11 +14,11 @@ const DetailPage = () => {
     const card = JSON.parse(localStorage.getItem("card")) || []
     const [modal, setModal] = useState(false)
     const {id} = useParams();
-    const [like, setLike] = useState( initialValue)
+    const [like, setLike] = useState(initialValue)
     const [goBasket, setGoBasket] = useState(false)
     books.quantity = quantity
     const liked = () => {
-        let newLike= !like
+        let newLike = !like
         setLike(newLike)
         localStorage.setItem('like', JSON.stringify(newLike))
     }
@@ -90,21 +88,16 @@ const DetailPage = () => {
                         <h1>$ {books.price * quantity}</h1>
 
                         <div className="cards--title__bottom">
-                            <button className="cards--title__bottom--btn" onClick={() => {
-                                addCart()
-                                addToBasket(books)
-                                console.log(card)
-                            }}>Add to Cart
-                            </button>
 
                             {
-                                goBasket? <NavLink to={"/cart"} >
+                                goBasket ? <NavLink to={"/cart"}>
                                         <button className="cards--title__bottom--btn">
-                                            Go to basket</button>
+                                            Go to basket
+                                        </button>
                                     </NavLink>
-                                    :    <button className="cards--title__bottom--btn" onClick={() => {
+                                    : <button className="cards--title__bottom--btn" onClick={() => {
                                         addToBasket(books)
-                                    setGoBasket(!goBasket)
+                                        setGoBasket(!goBasket)
                                     }}>Add to Card</button>
                             }
 

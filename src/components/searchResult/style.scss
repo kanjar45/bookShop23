@@ -1,0 +1,154 @@
+.search{
+  margin: 130px 0;
+  &--cards{
+
+    &__card1{
+      display: flex;
+      flex-direction: column;
+      align-items: start;
+      margin-bottom: 30px;
+      padding: 50px 0;
+      &--titles{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        h1{
+          color: var(--text-color, #19272E);
+          font-size: 32px;
+          font-family: Public Sans;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 48px;
+          letter-spacing: -1.08px;
+        }
+        p{
+          color: grey;
+          font-size: 20px;
+          font-family: Public Sans;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px;
+          letter-spacing: -0.4px;
+        }
+      }
+      &--img{
+
+        img {
+          width: 200px;
+        }
+      }
+      &--title {
+            width: 200px;
+
+            h5 {
+              color: var(--text-color, #19272E);
+              font-size: 18px;
+              font-family: Public Sans;
+              font-weight: 700;
+              margin: 10px 0;
+            }
+
+            p {
+              color: var(--text-color, #19272E);
+              font-size: 16px;
+              font-family: Public Sans;
+              display: flex;
+            }
+          }
+    }
+    &__no{
+      h1{
+        color: var(--text-color, #19272E);
+        text-align: center;
+        font-size: 48px;
+        font-family: Public Sans;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1140px) {
+  .search{
+    &--cards{
+     &__card{
+       &--titles{
+         h1{
+           font-size: 28px;
+         }
+       }
+     }
+    }
+  }
+}
+@media (max-width: 985px) {
+  .search{
+    &--cards{
+     &__card{
+       &--titles{
+         h1{
+           font-size: 26px;
+           max-width: 500px;
+         }
+       }
+     }
+    }
+  }
+}
+@media (max-width: 700px) {
+  .search{
+    &--cards{
+    &__card{
+      &--titles{
+        flex-wrap: wrap;
+        h1{
+          font-size: 24px;
+          max-width: 400px;
+        }
+      }
+    }
+    }
+  }
+}
+@media (max-width: 400px) {
+  .search{
+    &--cards{
+
+      &__card1{
+        &--titles{
+          flex-wrap: wrap;
+          h1{
+            font-size: 22px;
+            max-width: 400px;
+            line-height: 30px;
+          }
+        }
+        &--img{
+          img{
+            width: 150px;
+            height: 225px;
+          }
+        }
+        &--title{
+          h5{
+            max-width: 150px;
+            font-size: 16px;
+            font-weight: 700;
+          }
+          p{
+
+            font-size: 16px;
+            font-weight: 400;
+          }
+        }
+      }
+      &__no{
+        h1{
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}

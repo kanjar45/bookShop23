@@ -3,8 +3,6 @@ import Data from "../data";
 import {NavLink} from "react-router-dom";
 import {RiEqualizerLine} from "react-icons/ri";
 import BooksGenres from "./booksGenres/booksGenres";
-import {CgClose} from "react-icons/cg";
-
 const AllBooks = () => {
     const [books, setBooks] = useState([])
     const [burgerMenu, setBurgerMenu] = useState(false)

@@ -74,21 +74,19 @@
       justify-content: space-around;
       align-items: center;
       gap: 10px;
-
-
       .active {
         border: none;
         position: relative;
         transition: 1s;
         background: transparent;
-        //border: none;
+z-index: 1;
         .header--icons__search--right__icon {
           position: absolute;
-          right: -100px;
+
         }
       }
-
       &__search {
+        z-index: 120;
         position: absolute;
         height: 40px;
         background: white;
@@ -96,7 +94,7 @@
         border-radius: 20px;
         width: 77%;
 
-   right: 110px;
+   right: 7%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -156,7 +154,7 @@
 
       &__burger {
         display: none;
-        z-index: 2;
+        z-index: 111;
         margin-left: 15px;
 
         &--btn {

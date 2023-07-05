@@ -1,13 +1,5 @@
 import React, {useState} from 'react';
 
-import {NavLink,Link} from "react-router-dom";
-
-import {BiSearch} from "react-icons/bi";
-import {HiOutlineShoppingBag} from "react-icons/hi";
-const Header = () => {
-
-    const [burger, setBurger] = useState(false)
-
 import {NavLink, Link, useNavigate} from "react-router-dom";
 
 import {BiSearch} from "react-icons/bi";
@@ -54,9 +46,12 @@ const Header = () => {
                     </ul>
                     <div className="header--icons">
 
+
+
                         <BiSearch className="header--icons__search "/>
 
                         <div className={`header--icons__search ${search ? "" : "active"}`}>
+
                             <div className="header--icons__search--input">
                                 <input type="text" placeholder={`${search ? "Search" : ""}`} style={{
                                     display: search ? "block" : "none",
@@ -69,12 +64,16 @@ const Header = () => {
                                 <button style={{
                                     display: value.length === 0 ? "none" :
                                         "block" && search ? "block" : "none"
-                                }} className="header--icons__search--right__clear">
+                                }} className="header--icons__search--right__clear"
+                                onClick={()=>{
+                                    setValue("")
+                                }}>
                                     &times;
                                 </button>
                                 <BiSearch className="header--icons__search--right__icon "
                                           onClick={(e) => {
-                                            value.length>0 ? handleChange(value) :   setSearch(!search)
+                                            value.length>0 ? handleChange(value) :  setSearch(!search)
+                                              setValue("")
                                           }}
                                 />
                             </div>
